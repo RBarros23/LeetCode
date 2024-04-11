@@ -1,20 +1,22 @@
 function isValid(s: string): boolean {
-    let nMap = new Map([
+    if(s.length % 2 !== 0 ) return false;
+    let stack = new Array;
+    const startMap = new Map([
         ["(", ")"],
         ["{", "}"],
         ["[", "]"]
     ]);
     
-    for(let i = 0; i < s.length - 1; i += 2){
-        if(s[i+1] !== nMap.get(s[i])){
-            console.log(`S +1: ${s[i+1]}`);
-            console.log(`S: ${s[i]}`);
-            console.log(`Map: ${nMap.get(s[i])}`)
-            return false
-        };
+    for (let c of s){
+        if(startMap.has(c)) stack.push(c);
+        else {
+            if (stack.length === 0 || startMap.get(stack.pop()!) !== c) {
+                return false;
+            }
+        }
     }
-    
-    return true;
+
+    return stack.length === 0;
 };
 
 console.log(isValid("{[]}"));
