@@ -1,0 +1,13 @@
+{
+  "name": "150_evaluate_reverse_polish_notation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "buildandrun": "tsc && npm run run",
+    "run": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
