@@ -1,0 +1,12 @@
+{
+  "name": "155_min_stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "tsc && node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
